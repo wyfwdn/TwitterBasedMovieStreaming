@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Streaming</title>
+</head>
+
+<body>
+    <h1 style="text-align:center"> Movie Streaming </h1>
+
+    <div id="container" style="width:1250px" align="center">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter movie name">
+        <button id="search" onclick="clickbutton()" type="button">Search movie!</button><br>
+        <br>
+        <a href="http://127.0.0.1:8000/recommendation/" target="_blank">Recommendations click here!</button><br>
+
+        <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            function clickbutton() {
+
+                var input
+                input = document.getElementById('myInput').value;
+                if (input == 'Hidden Figures' || input == 'hidden figures') {
+                    window.open("http://127.0.0.1:8000/hidden_figures/");
+                } else if (input == 'Get Out' || input == 'get out') {
+                    window.open("http://127.0.0.1:8000/get_out/");
+                } else if (input == 'Sleepless' || input == 'sleepless') {
+                    window.open("http://127.0.0.1:8000/sleepless/");
+                } else if (input == 'Patriots Day' || input == 'patriots day') {
+                    window.open("http://127.0.0.1:8000/patriots_day/");
+                } else if (input == 'Alien: Covenant' || input == 'Alien Covenant' || input == 'alien covenant') {
+                    window.open("http://127.0.0.1:8000/alien_covenant/");
+                } else if (input == 'Aftermath' || input == 'aftermath') {
+                    window.open("http://127.0.0.1:8000/aftermath/");
+                } else if (input == 'Going in Style' || input == 'going in style') {
+                    window.open("http://127.0.0.1:8000/going_in_style/");
+                } else if (input == 'A Monster Calls' || input == 'a monster calls') {
+                    window.open("http://127.0.0.1:8000/a_monster_calls/");
+                } else if (input == 'The Bye Bye Man' || input == 'the bye bye man' || input == 'bye bye man') {
+                    window.open("http://127.0.0.1:8000/the_bye_bye_man/");
+                } else if (input == 'Unforgettable' || input == 'unforgettable') {
+                    window.open("http://127.0.0.1:8000/unforgettable/");
+                } else if (input == 'A Cure for Wellness' || input == 'a cure for wellness') {
+                    window.open("http://127.0.0.1:8000/a_cure_for_wellness/");
+                } else if (input == 'The Circle' || input == 'the circle' || input == 'circle') {
+                    window.open("http://127.0.0.1:8000/the_circle/");
+                } else if (input == 'The Promise' || input == 'the promise' || input == 'promise') {
+                    window.open("http://127.0.0.1:8000/the_promise/");
+                } else if (input == 'Colossal' || input == 'colossal') {
+                    window.open("http://127.0.0.1:8000/colossal/");
+                } else if (input == 'The Lost City of Z' || input == 'the lost city of z' || input == 'lost city of z') {
+                    window.open("http://127.0.0.1:8000/the_lost_city_of_z/");
+                } else if (input == 'Below Her Mouth' || input == 'below her mouth') {
+                    window.open("http://127.0.0.1:8000/below_her_mouth/");
+                } else {
+                    alert('no result!')
+                }
+            }
+        </script>
+
+        <br>
+        <a href="http://127.0.0.1:8000/hidden_figures/" target="_blank"><img src="/static/hidden_figures.jpg" width="315" height="600" /></a>
+        </br>
+        <br>
+        <a href="http://127.0.0.1:8000/get_out/" target="_blank"><img src="/static/get_out.jpg" width="480" height="720" /></br>
+            <br>
+            <a href="http://127.0.0.1:8000/sleepless/" target="_blank"><img src="/static/sleepless.jpg" width="420" height="630" /></br>
+                <br>
+                <a href="http://127.0.0.1:8000/patriots_day/" target="_blank"><img src="/static/patriots_day.jpg" width="420" height="630" /></br>
+                    <br>
+                    <a href="http://127.0.0.1:8000/alien_covenant/" target="_blank"><img src="/static/alien_covenant.jpg" width="482" height="640" /></br>
+                        <br>
+                        <a href="http://127.0.0.1:8000/aftermath/" target="_blank"><img src="/static/aftermath.jpg" width="482" height="640" /></br>
+                            <br>
+                            <a href="http://127.0.0.1:8000/going_in_style/" target="_blank"><img src="/static/going_in_style.jpg" width="640" height="360" /></br>
+                                <br>
+                                <a href="http://127.0.0.1:8000/a_monster_calls/" target="_blank"><img src="/static/a_monster_calls.jpg" width="600" height="460" /></br>
+                                    <br>
+                                    <a href="http://127.0.0.1:8000/the_bye_bye_man/" target="_blank"><img src="/static/the_bye_bye_man.jpg" width="509" height="755" /></br>
+                                        <br>
+                                        <a href="http://127.0.0.1:8000/unforgettable/" target="_blank"><img src="/static/unforgettable.jpg" width="509" height="755" /></br>
+                                            <br>
+                                            <a href="http://127.0.0.1:8000/a_cure_for_wellness/" target="_blank"><img src="/static/a_cure_for_wellness.jpg" width="620" height="285" /></br>
+                                                <br>
+                                                <a href="http://127.0.0.1:8000/the_circle/" target="_blank"><img src="/static/the_circle.jpg" width="600" height="315" /></br>
+                                                    <br>
+                                                    <a href="http://127.0.0.1:8000/the_promise/" target="_blank"><img src="/static/the_promise.jpg" width="850" height="313" /></br>
+                                                        <br>
+                                                        <a href="http://127.0.0.1:8000/the_lost_city_of_z/" target="_blank"><img src="/static/the_lost_city_of_z.jpg" width="825" height="464" /></br>
+                                                            <br>
+                                                            <a href="http://127.0.0.1:8000/colossal/" target="_blank"><img src="/static/colossal.jpg" width="600" height="889" /></br>
+                                                                <br>
+                                                                <a href="http://127.0.0.1:8000/below_her_mouth/" target="_blank"><img src="/static/below_her_mouth.jpg" width="540" height="540" /></br>
+    </div>
+</body>
+
+</html>

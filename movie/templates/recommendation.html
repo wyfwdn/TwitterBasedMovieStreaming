@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recommendation</title>
+</head>
+
+<body>
+    <h1 style="text-align:center"> Recommendation </h1>
+
+    <div id="container" style="width:1250px" align="center">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter userid...">
+        <button id="search" onclick="clickbutton()" type="button">See recommended movies!</button><br>
+        <br>
+        <a id='field1' target="_blank"><img id='img1' /></a><br>
+        <a id='field2' target="_blank"><img id='img2' /></a><br>
+        <a id='field3' target="_blank"><img id='img3' /></a><br>
+        <a id='field4' target="_blank"><img id='img4' /></a><br>
+        <a id='field5' target="_blank"><img id='img5' /></a><br>
+        <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            function clickbutton() {
+                var input
+                input = document.getElementById('myInput').value;
+
+                var postdata = {
+                    "name": input,
+                };
+                $.ajax({
+                    url: '/post/',
+                    type: "POST",
+                    data: postdata,
+                    success: function(data) {
+                        data = JSON.parse(data);
+                        if (data[0] == 0) {
+                            alert('Invalid UserId');
+                        } else {
+                            document.getElementById('field1').href = "http://127.0.0.1:8000/" + data[0] + "/"
+                            document.getElementById('img1').src = "/static/" + data[0] + ".jpg"
+                            document.getElementById('field2').href = "http://127.0.0.1:8000/" + data[1] + "/"
+                            document.getElementById('img2').src = "/static/" + data[1] + ".jpg"
+                            document.getElementById('field3').href = "http://127.0.0.1:8000/" + data[2] + "/"
+                            document.getElementById('img3').src = "/static/" + data[2] + ".jpg"
+                            document.getElementById('field4').href = "http://127.0.0.1:8000/" + data[3] + "/"
+                            document.getElementById('img4').src = "/static/" + data[3] + ".jpg"
+                            document.getElementById('field5').href = "http://127.0.0.1:8000/" + data[4] + "/"
+                            document.getElementById('img5').src = "/static/" + data[4] + ".jpg"
+                        }
+                    }
+
+
+                });
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>
